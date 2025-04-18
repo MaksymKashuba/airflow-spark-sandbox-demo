@@ -28,7 +28,7 @@ python_job = SparkSubmitOperator(
 scala_job = SparkSubmitOperator(
     task_id="scala_job",
     conn_id="spark-conn",
-    application="jobs\scala\target\scala-2.12\word-count_2.12-0.1.jar",
+    application="jobs/scala/target/scala-2.12/word-count_2.12-0.1.jar",
     dag=dag
 )
 
