@@ -1,4 +1,4 @@
-# Airflow Spark Demo
+# Airflow Spark Sandbox Demo
 
 This project serves as a study sandbox for learning and experimenting with Apache Spark and Apache Airflow. It allows you to create Spark jobs in Python, Scala, and Java, and run them using Airflow.
 
