@@ -2,31 +2,9 @@
 
 This project serves as a study sandbox for learning and experimenting with Apache Spark and Apache Airflow. It allows you to create Spark jobs in Python, Scala, and Java, and run them using Airflow.
 
-## Project Structure
-
-```
-airflow-spark-demo/
-├── dags/                     # Airflow DAGs
-│   └── spark_airflow.py      # Main DAG for Spark jobs
-├── jobs/
-│   ├── python/               # Python Spark job
-│   │   └── wordcountjob.py   # Word count example in Python
-│   ├── scala/                # Scala Spark job
-│   │   ├── wordcount.scala   # Word count example in Scala
-│   │   └── build.sbt         # SBT build file for Scala job
-│   └── java/                 # Java Spark job
-│       ├── spark-job/        # Maven project for Java job
-│       │   ├── pom.xml       # Maven configuration
-│       │   └── src/          # Source code for Java job
-├── .gitignore                # Git ignore file
-├── airflow.env               # Airflow environment variables
-├── docker-compose.yml        # Docker Compose configuration
-└── Dockerfile                # Dockerfile for Airflow setup
-```
-
 ## Prerequisites
 
-- Docker and Docker Compose
+- Docker
 - Java 17
 - Scala 2.12
 - Apache Maven
