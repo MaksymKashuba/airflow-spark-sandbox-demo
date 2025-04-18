@@ -32,10 +32,17 @@ scala_job = SparkSubmitOperator(
     dag=dag
 )
 
+java_job = SparkSubmitOperator(
+    task_id="java_job",
+    conn_id="spark-conn",
+    application="jobs/java/spark-job/target/spark-job-1.0-SNAPSHOT.jar",
+    dag=dag
+)
+
 end = PythonOperator(
     task_id="end",
     python_callable = lambda: print("Jobs completed successfully"),
     dag=dag
 )
 
-start >> [python_job, scala_job] >> end
+start >> [python_job, scala_job, java_job] >> end
