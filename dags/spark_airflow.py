@@ -26,3 +26,11 @@ python_job = SparkSubmitOperator(
     application='/path/to/your/wordcountjob.py',
     dag=dag
 )
+
+end = PythonOperator(
+    task_id='end',
+    python_callable=lambda: print("Completed the DAG"),
+    dag=dag,
+)
+
+start >> python_job >> end
