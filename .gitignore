@@ -5,3 +5,4 @@ __pycache__
 .dockerignore
 jobs/scala/project/
 jobs/scala/target/
+jobs/java/spark-job/target/

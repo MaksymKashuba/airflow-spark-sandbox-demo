@@ -1,13 +1,13 @@
 package com.airscholar.spark;
+
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
 import java.util.Arrays;
 import java.util.List;
-/**
- * Hello world!
- *
- */
+
 public class wordcount 
 {
     public static void main( String[] args )
@@ -18,7 +18,7 @@ public class wordcount
         String text = "Hallo World! Hello Spark!";
         List<String> lines = Arrays.asList(text.split(" "));
 
-        JavaRdd<String> rdd = sc.parallelize(lines);
+        JavaRDD<String> rdd = sc.parallelize(lines);
         JavaPairRDD<String, Integer> wordCounts = rdd.mapToPair(word -> new Tuple2<>(word, 1))
                 .reduceByKey((a, b) -> a + b);
         
