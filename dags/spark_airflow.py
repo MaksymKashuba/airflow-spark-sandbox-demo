@@ -36,6 +36,7 @@ java_job = SparkSubmitOperator(
     task_id="java_job",
     conn_id="spark-conn",
     application="jobs/java/spark-job/target/spark-job-1.0-SNAPSHOT.jar",
+    java_class="com.example.sparkjob.WordCountJob",
     dag=dag
 )
 
